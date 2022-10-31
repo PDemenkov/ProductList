@@ -4,7 +4,7 @@ import java.util.Set;
 
 public class ProductList {
 
- private final Set<Product> products = new HashSet<>();
+    private final Set<Product> products = new HashSet<>();
 
     public void addProduct(Product product) {
         if (this.products.contains(product)) {

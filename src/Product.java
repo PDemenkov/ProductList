@@ -10,18 +10,18 @@ public class Product {
 
     public Product(String name, float price, float amount) {
         if (name == null || name.isBlank()) {
-            throw new IllegalArgumentException("Заполните карточку товара полностью, отсутствует имя" );
+            throw new IllegalArgumentException("Заполните карточку товара полностью, отсутствует имя");
         } else this.name = name;
         if (price < 0) {
             throw new IllegalArgumentException("Заполните карточку товара полностью, отсутствует цена");
-        } else this.price = Math.max(1f,price);
+        } else this.price = Math.max(1f, price);
         if (amount < 0) {
             throw new IllegalArgumentException("Заполните карточку товара полностью, отсутствует количество");
-        } else this.amount = Math.max(1f,amount);
-        this.checked=false;
+        } else this.amount = Math.max(1f, amount);
+        this.checked = false;
     }
 
-    public  void addProduct (String name, Set<String> set) {
+    public void addProduct(String name, Set<String> set) {
         if (set.contains(this.name)) {
             throw new RuntimeException("Уже куплен " + this.name);
         } else {
@@ -72,7 +72,7 @@ public class Product {
     public String toString() {
         String checkedString = this.isChecked() ? "Да" : "Нет";
         return "Продукт "
-                 + this.name + '\'' +
+                + this.name + '\'' +
                 "по цене:  " + this.price +
                 ", цена за кг: " + this.amount + ", куплен: " + checkedString +
                 '}';

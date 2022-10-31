@@ -15,7 +15,7 @@ public class Main {
 //        productList.addProduct(orange2); //добавление дубля
 //        System.out.println(productList);
 
-        Recipe recipe = new Recipe("Recipe1",Set.of(orange,apple));
+        Recipe recipe = new Recipe("Recipe1", Set.of(orange, apple));
         System.out.println(recipe.getRecipePrice());
 
         //        Set<String> productList = new HashSet<>();

@@ -19,10 +19,11 @@ public class Recipe {
     }
 
     public float getRecipePrice() {
-        float sum =0;
+        float sum = 0;
         for (Product product : products) {
             sum += product.getPrice();
-        }return sum;
+        }
+        return sum;
     }
 
     public Set<Product> getProducts() {
